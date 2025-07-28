@@ -1,0 +1,72 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=15
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set rnu
+set number
+set showmode
+set ideajoin
+
+set clipboard=unnamed
+
+noremap <SPACE> <Nop>
+let mapleader = " "
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+"xnoremap <leader>p "_dP
+set ReplaceWithRegister
+xmap p gr
+
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
+map <leader>r <Action>(RenameElement)
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+nmap <leader>q <Action>(QuickJavaDoc)
+nmap <leader>e <Action>(RunClass)
+nmap <leader>z <Action>(ToggleDistractionFreeMode)
+"Open recent project from list (work better than <Action>(OpenProjectWindows))
+nmap <leader>pw <Action>(RecentProjectListGroup)
+
+
+nmap <leader>it <Action>(Scala.TypeInfo)
+nmap <leader>id <Action>(QuickImplementations)
+nmap <leader>ie <Action>(ShowErrorDescription)
+
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>ff <Action>(SelectIn)
+
+
+nmap <leader>mh <Action>(HideAllWindows)
+
+nmap <leader>sl <Action>(MoveTabRight)
+nmap <leader>sw <Action>(CloseAllEditors)
+nmap <leader>sf <Action>(MoveEditorToOppositeTabGroup)
