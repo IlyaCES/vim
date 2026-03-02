@@ -70,3 +70,6 @@ nmap <leader>mh <Action>(HideAllWindows)
 nmap <leader>sl <Action>(MoveTabRight)
 nmap <leader>sw <Action>(CloseAllEditors)
 nmap <leader>sf <Action>(MoveEditorToOppositeTabGroup)
+
+nmap <leader>ea <Action>(ChooseRunConfiguration)
+nmap <leader>es <Action>(Stop)
